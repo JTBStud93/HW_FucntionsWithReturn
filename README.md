@@ -76,9 +76,35 @@ public class FuncReturn : MonoBehaviour {
 
 public class FuncReturn : MonoBehaviour {
 
+  public float cash = 0.0f;
+  public float hours = 0.0f;
+
+  void Start()
+  {
+    float num = cash * hours;
+    print("Since your payrate is $" + cash + ", and you've worked for " + hours + " hours; you have earned " + num + " dollars.");
+  }
+}
+
 5.
 
 public class FuncReturn : MonoBehaviour {
+
+public int GoodClone = 0;
+public int EvilClone = 0;
+
+  void Start()
+  {
+    int num = TotalClones(GoodClone, EvilClone);
+    print("After the clone war of yourself, you started with " + GoodClone + " Good Clone(s), and " + EvilClone + " Evil Clone(s); now you have a total of " + num + " clone(s) leftover.");
+  }
+
+  public int TotalClones(int Good, int Evil)
+  {
+    int result = Good - Evil;
+    return result;
+  }
+}
 
 6.
 
