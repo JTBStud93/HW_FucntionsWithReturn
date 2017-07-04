@@ -48,6 +48,30 @@ public class FuncReturn : MonoBehaviour {
 
 public class FuncReturn : MonoBehaviour {
 
+  public int sword;
+  public int magic;
+  public int shield;
+  public int armor;
+
+  void Start()
+  {
+    int num1 = TotalAttack(sword, magic);
+    int num2 = TotalDefense(shield, armor);
+    print(num1 + " Attack Points & " + num2 + " Defense Points");
+  }
+
+  public int TotalAttack(int SwordAtk, int MagicAtk)
+  {
+    int Attack = SwordAtk + MagicAtk;
+    return Attack;
+  }
+
+  public int TotalDefense(int ShieldDef, int ArmorDef)
+  {
+    int Defense = ShieldDef + ArmorDef;
+    return Defense;
+}
+
 4.
 
 public class FuncReturn : MonoBehaviour {
