@@ -43,7 +43,7 @@ public class FuncReturn : MonoBehaviour {
 }
 ------------------------------------------------------------------------------------------------------------
 
-3.
+3. In this example, it has two different functions below "void Start ()". One is for "TotalAttack" (sword & magic), and the other for "TotalDefense" (shield & armor). Each integer is combined in their functions, and prints the total number for each function.
 
 public class FuncReturn : MonoBehaviour {
 
@@ -71,7 +71,7 @@ public class FuncReturn : MonoBehaviour {
     return Defense;
 }
 
-4.
+4. Similar to #1, floats are used instead of integers, and are multiplied instead of being added.
 
 public class FuncReturn : MonoBehaviour {
 
@@ -85,7 +85,7 @@ public class FuncReturn : MonoBehaviour {
   }
 }
 
-5.
+5. Similar to #1 & #2, the result of the total amount of clones is from "GoodClone" subtracting "EvilClone" instead of adding. And for some reason, if the value of "EvilClone" is higher than the "GoodClone" when subtracting, it will print a negative number.
 
 public class FuncReturn : MonoBehaviour {
 
@@ -144,7 +144,7 @@ public class FuncReturn : MonoBehaviour {
 		print(_i * 10);
 	}
 
-8.
+8. Similar to #1 & #2.
 
 public class FuncReturn : MonoBehaviour {
   public int Fruit;
@@ -163,7 +163,7 @@ public class FuncReturn : MonoBehaviour {
   }
 }
 
-9.
+9. Similar to #1 & #2, only this time it has an if statement. You can plug in the values for both RedCards & BlackCards, but if the TotalCards is equal to num (which is assigned to 26), then it will print in the console.
 
 public class FuncReturn : MonoBehaviour {
 
