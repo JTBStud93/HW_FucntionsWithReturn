@@ -24,7 +24,6 @@ public class FuncReturn : MonoBehaviour {
 }
 
 ------------------------------------------------------------------------------------------------------------
-
 NOTE: Before continuing with the examples, the script below has BOTH functions from above. When I tested with just the first example on my home computer, it says that "AddNumbers" doesn't exist in the current context. Then when I only used the second example, I don't get any errors, but the GameObject's script is just "blank" - you can't really do anything with it. BUT, when I have both of them together (as shown below), it works just fine. 
 
 public class FuncReturn : MonoBehaviour {
@@ -148,10 +147,44 @@ public class FuncReturn : MonoBehaviour {
 8.
 
 public class FuncReturn : MonoBehaviour {
+  public int Fruit;
+  public int Apparel;
+  public int Entertainment;
+
+  void Start(){
+    int num = TotalItems(Fruit, Apparel, Entertainment);
+    print(num);
+  }
+
+  public int TotalItems(int Food, int Clothes, int VideoGames){
+    int result = Food + Clothes + VideoGames;
+
+    return result;
+  }
+}
 
 9.
 
 public class FuncReturn : MonoBehaviour {
+
+  public int RedCards;
+  public int BlackCards;
+  public int num = 26;
+
+  void Start(){
+    int num = TotalCards(RedCards, BlackCards);
+    if(num == TotalCards)
+    {
+    	print("We have all 26 cards together");
+    }
+  }
+
+  public int TotalCards(int Red, int Black){
+    int result = Red + Black;
+
+    return result;
+  }
+}
 
 10.
 
