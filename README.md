@@ -186,6 +186,44 @@ public class FuncReturn : MonoBehaviour {
   }
 }
 
-10.
+10. Based on today's class (7/5/2017). This "set" of examples shows different functions, such as when a video game is loading. "Awake" basically gets the game running or loading, "OnEnabled" is for loading the stages, characters, etc.; "Start" is, of course, starting the game. "OnDisabled" is when you are turning the "game" off. Now with the "Trigger" functions, if you have one of them hold this script, and while in PlayMode, if you move another GameObject into it, it will print "Enter". Afterwards (if you have "OnTriggerStay"), it will print "Staying" in the console while the GameObject is inside of the G.O. holding this script. Then it will print "Exit" once it leaves.
 
 public class FuncReturn : MonoBehaviour {
+
+	void Awake() 
+	{
+		print("Awake");
+	}
+	
+	
+	void OnEnable()
+	{
+		print("Enabled");
+	}
+
+	void Start()
+	{
+		print("Start");
+	}
+
+	void OnDisable()
+	{
+		print("Disabled");
+	}
+
+	void OnTriggerEnter()
+	{
+		print("Enter");
+	}
+	
+	void OnTriggerStay()
+	{
+		print("Staying");
+	}
+
+	void OnTriggerExit()
+	{
+		print("Exit");
+	}
+
+}
