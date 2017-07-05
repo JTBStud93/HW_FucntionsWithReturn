@@ -106,13 +106,44 @@ public int EvilClone = 0;
   }
 }
 
-6.
+6. Based on today's class (7/5/2017). Creating & using GameObjects in Unity (and its PlayMode), if you have one that's just holding this script, and other GameObjects named "enemy" touch the Collider, then the console will print "Adding Health". If it's not named "enemy", then it won't print "Adding Health".
 
 public class FuncReturn : MonoBehaviour {
 
-7.
+  void OnTriggerEnter (Collider _col)
+  {
+    print(_col.name);
+    if(_col.name != "enemy")
+    {
+      _col.gameObject.SetActive(false);
+    }
+    else
+    {
+      print("Adding Health");
+    }
+  }
+
+7. Based on today's class (7/5/2017). This is one way to create "placeholders" in the script for Unity's Inspector, but this is also meant to "UseData" and print it on the Unity Console. To see the way it works, for example, you have the "_s" next to "string", that "string" is also at the top of the script, which has the function 'myName = "Tony";', and one of the functions below the "void Start ()" is "UseData(myName);". So where it says 'print(_s + ", Hello.");', the console will read "Tony, Hello.".
 
 public class FuncReturn : MonoBehaviour {
+
+  public string myName = "Tony";
+	public int myScore = 2;
+  
+	void Start () {
+		UseData(myName);
+		UseData(myScore);
+	}
+	
+  void UseData(string _s)
+	{
+		print(_s + ", Hello.");
+	}
+	
+  void UseData (int _i)
+	{
+		print(_i * 10);
+	}
 
 8.
 
